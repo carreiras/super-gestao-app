@@ -2,6 +2,17 @@
 
 @php
 
+/**
+ * if (condicao) {
+ *
+ * } elseif {
+ *
+ * } else {
+ *
+ * }
+ *
+ * **/
+
 @endphp
 
 {{-- @dd($fornecedores) --}}
