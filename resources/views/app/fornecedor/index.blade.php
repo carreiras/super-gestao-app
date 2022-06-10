@@ -12,10 +12,23 @@
     <br />
     Status: {{ $fornecedores[0]['status'] }}
     <br />
-    CNPJ: {{ $fornecedores[1]['cnpj'] ?? 'Dado não foi preenchido' }}
+    CNPJ: {{ $fornecedores[1]['cnpj'] ?? '' }}
+    <br />
+    Telefone: {{ $fornecedores[1]['ddd'] ?? '' }} {{ $fornecedores[1]['telefone'] ?? '' }}
+    @switch($fornecedores[1]['ddd'])
+        @case('11')
+            São Paulo - SP
+        @break
 
-    {{-- $variavel testada não estiver definica (isset)
-    ou
-    $variavel testada possuir valor nulo --}}
+        @case('85')
+            Fortaleza - CE
+        @break
 
+        @case('32')
+            Juiz de Fora - MG
+        @break
+
+        @default
+            Estado não identificado
+    @endswitch
 @endisset
