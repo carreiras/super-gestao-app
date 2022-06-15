@@ -9,13 +9,13 @@
 
 @isset($fornecedores)
     @for ($i = 0; isset($fornecedores[$i]); $i++)
-        Fornecedor: {{ $fornecedores[0]['nome'] }}
+        Fornecedor: {{ $fornecedores[$i]['nome'] }}
         <br />
-        Status: {{ $fornecedores[0]['status'] }}
+        Status: {{ $fornecedores[$i]['status'] }}
         <br />
-        CNPJ: {{ $fornecedores[1]['cnpj'] ?? '' }}
+        CNPJ: {{ $fornecedores[$i]['cnpj'] ?? '' }}
         <br />
-        Telefone: {{ $fornecedores[1]['ddd'] ?? '' }} {{ $fornecedores[1]['telefone'] ?? '' }}
+        Telefone: {{ $fornecedores[$i]['ddd'] ?? '' }} {{ $fornecedores[$i]['telefone'] ?? '' }}
         <hr>
     @endfor
 @endisset
